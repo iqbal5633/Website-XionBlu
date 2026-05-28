@@ -18,7 +18,19 @@ document.getElementById("bgMusic");
 
 music.volume = 0.15;
 
+// ===============================
+// DATA AKUN
+// ===============================
+
+let savedAccount = {
+    username: "",
+    password: ""
+};
+
+// ===============================
 // LOGIN
+// ===============================
+
 const loginBtn =
 document.getElementById("loginBtn");
 
@@ -34,35 +46,82 @@ document.getElementById("navbarUser");
 loginBtn.addEventListener("click", () => {
 
     const username =
-    document.getElementById("loginUsername").value;
+    document.getElementById("loginUsername")
+    .value.trim();
 
-    if(username === ""){
+    const password =
+    document.getElementById("loginPassword")
+    .value.trim();
 
-        alert("Masukkan username");
+    // VALIDASI
+    if(username === "" || password === ""){
+
+        alert("Username & Password wajib diisi");
         return;
 
     }
 
-    showUser.innerText = username;
-    navbarUser.innerText = username;
+    // CEK AKUN
+    if(
+        username === savedAccount.username &&
+        password === savedAccount.password
+    ){
 
-    authContainer.style.display = "none";
+        showUser.innerText = username;
+        navbarUser.innerText = username;
 
-    music.play();
+        authContainer.style.display = "none";
+
+        music.play();
+
+        alert("Login berhasil");
+
+    }else{
+
+        alert("Username atau password salah");
+
+    }
 
 });
 
+
+// ===============================
 // REGISTER
+// ===============================
+
 const registerBtn =
 document.getElementById("registerBtn");
 
 registerBtn.addEventListener("click", () => {
 
+    const username =
+    document.getElementById("registerUsername")
+    .value.trim();
+
+    const password =
+    document.getElementById("registerPassword")
+    .value.trim();
+
+    // VALIDASI
+    if(username === "" || password === ""){
+
+        alert("Isi username & password");
+        return;
+
+    }
+
+    // SIMPAN AKUN
+    savedAccount.username = username;
+    savedAccount.password = password;
+
     alert("Akun berhasil dibuat");
 
-    document.getElementById("registerForm").style.display = "none";
+    // PINDAH KE LOGIN
+    document.getElementById("registerForm")
+    .style.display = "none";
 
-    document.getElementById("loginForm").style.display = "block";
+    document.getElementById("loginForm")
+    .style.display = "block";
 
 });
 
