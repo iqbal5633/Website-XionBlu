@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>XIONBLU Cyber Market</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+<!-- BACKGROUND -->
+<div class="bg-animation"></div>
+
+<!-- LOADING -->
+<div id="loading">
+
+  <div class="loader"></div>
+
+  <h2>XIONBLU SYSTEM</h2>
+
+  <p>Loading Stock & SYSTEM...</p>
+
+</div>
+
+<!-- LOGIN / REGISTER -->
+<div class="auth-container" id="authContainer">
+
+  <div class="auth-box">
+
+    <h1 class="logo-login">
+      XION<span>BLU</span>
+    </h1>
+
+    <p class="login-subtitle">
+      XiinBlu Marketplace
+    </p>
+
+    <!-- LOGIN -->
+    <div id="loginForm">
+
+      <div class="input-group">
+        <label>Username</label>
+        <input type="text" id="loginUsername">
+      </div>
+
+      <div class="input-group">
+        <label>Password</label>
+        <input type="password" id="loginPassword">
+      </div>
+
+      <button class="main-btn" id="loginBtn">
+        LOGIN
+      </button>
+
+      <p class="switch-text">
+        Belum punya akun?
+        <span id="showRegister">
+          Daftar
+        </span>
+      </p>
+
+    </div>
+
+    <!-- REGISTER -->
+    <div id="registerForm" style="display:none;">
+
+      <div class="input-group">
+        <label>Username</label>
+        <input type="text" id="registerUsername">
+      </div>
+
+      <div class="input-group">
+        <label>Password</label>
+        <input type="password" id="registerPassword">
+      </div>
+
+      <button class="main-btn" id="registerBtn">
+        DAFTAR
+      </button>
+
+      <p class="switch-text">
+        Sudah punya akun?
+        <span id="showLogin">
+          Login
+        </span>
+      </p>
+
+    </div>
+
+  </div>
+
+</div>
+
+<!-- MUSIC -->
+<audio id="bgMusic" loop>
+  <source src="assets/monokrom.mp3" type="audio/mp3">
+</audio>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+
+  <div class="container nav-wrapper">
+
+    <div class="logo">
+      XION<span>BLU</span>
+    </div>
+
+    <ul class="nav-menu">
+
+      <li><a href="#home">Beranda</a></li>
+      <li><a href="#layanan">Layanan</a></li>
+      <li><a href="#produk">Produk</a></li>
+      <li><a href="#akun">Akun</a></li>
+
+      <li class="account-menu">
+
+        <a href="#" class="account-btn">
+
+          <i class="fas fa-user-circle"></i>
+
+          <span id="navbarUser">
+            Guest
+          </span>
+
+        </a>
+
+      </li>
+
+    </ul>
+
+  </div>
+
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+
+  <div class="hero-content">
+
+    <h1>XIONBLU</h1>
+
+    <p>
+      Buy Gmail & Nokos
+    </p>
+
+    <a href="#produk" class="hero-btn">
+      BELI SEKARANG
+    </a>
+
+  </div>
+
+</section>
+
+<!-- AKUN -->
+<section class="section" id="akun">
+
+  <div class="container">
+
+    <h2 class="section-title">
+      INFORMASI AKUN
+    </h2>
+
+    <div class="grid">
+
+      <div class="card">
+
+        <i class="fas fa-user"></i>
+
+        <h3>Username</h3>
+
+        <p id="showUser">
+          Guest
+        </p>
+
+      </div>
+
+      <div class="card">
+
+        <i class="fas fa-shield-alt"></i>
+
+        <h3>Status</h3>
+
+        <p class="active">
+          Secure Active
+        </p>
+
+      </div>
+
+      <div class="card">
+
+        <i class="fas fa-server"></i>
+
+        <h3>Server</h3>
+
+        <p>
+          Baik ✅
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- LAYANAN -->
+<section class="section" id="layanan">
+
+  <div class="container">
+
+    <h2 class="section-title">
+      LAYANAN
+    </h2>
+
+    <div class="grid">
+
+      <div class="card">
+
+        <i class="fas fa-envelope"></i>
+
+        <h3>Buy Gmail Fresh</h3>
+
+        <p>
+          Email Fresh & Akun baru + Password : aass1122
+        </p>
+
+      </div>
+
+      <div class="card">
+
+        <i class="fas fa-mobile-alt"></i>
+
+        <h3>Buy Nokos</h3>
+
+        <p>
+          Nokos Fresh Akun Baru
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- PRODUK -->
+<section class="section" id="produk">
+
+  <div class="container">
+
+    <h2 class="section-title">
+      DAFTAR PRODUK
+    </h2>
+
+    <div class="grid">
+
+      <div class="card product-card">
+
+        <h3>Gmail Fresh</h3>
+
+        <p>Stock 78</p>
+
+        <div class="price">
+          Rp 4.500
+        </div>
+
+        <button class="buy-btn">
+          BELI SEKARANG
+        </button>
+
+      </div>
+
+      <div class="card product-card">
+
+        <h3>Nokos Whatsapps</h3>
+
+        <p>Stock : 50</p>
+
+        <div class="price">
+          Rp 4.000
+        </div>
+
+        <button class="buy-btn">
+          BELI SEKARANG
+        </button>
+
+      </div>
+
+      <div class="card product-card">
+
+        <h3>Nokos all app</h3>
+
+        <p>Jika beli nokos ini tanyakan terlebih dahulu pada admin</p>
+
+        <div class="price">
+          Rp 20.000
+        </div>
+
+        <button class="buy-btn">
+          BELI SEKARANG
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- POPUP -->
+<div class="popup-overlay" id="popup">
+
+  <div class="popup-box">
+
+    <h2>PEMBAYARAN QRIS</h2>
+
+    <p>
+      Klik tombol dibawah untuk membuka QRIS pembayaran
+    </p>
+
+    <a href="https://ibb.co.com/66ZjFXk"
+    target="_blank"
+    class="qris-link">
+
+      <i class="fas fa-qrcode"></i>
+      BUKA QRIS
+
+    </a>
+
+    <button id="closePopup">
+      Tutup
+    </button>
+
+  </div>
+
+</div>
+
+<footer>
+  © 2026 XIONBLU Cyber Market 
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
