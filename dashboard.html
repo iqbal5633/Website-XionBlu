@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XIONBLU | Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="dashboard-body">
+    <!-- Navbar -->
+    <nav class="navbar" id="mainNav">
+        <div class="container">
+            <div class="logo">
+                <span class="neon-text">XIONBLU</span>
+            </div>
+
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#beranda" class="nav-link">Beranda</a></li>
+                <li><a href="#layanan" class="nav-link">Layanan</a></li>
+                <li><a href="#akun" class="nav-link">Akun</a></li>
+                <li><a href="#produk" class="nav-link">Produk</a></li>
+                <li class="dropdown">
+                    <a href="#" class="nav-link user-link">
+                        <i class="fas fa-user-circle"></i> 
+                        <span id="namaUser"></span>
+                        <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <ul class="dropdown-menu glass-card">
+                        <li><a href="#" id="btnLogout"><i class="fas fa-sign-out-alt"></i> Keluar</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <div class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+    <!-- Hero Section -->
+    <section class="hero" id="beranda">
+        <div class="hero-bg"></div>
+        <div class="container hero-content">
+<h1 class="welcome-text">
+  Welcome To XionBlu Digital Service
+</h1>
+            <a href="#produk" class="btn-primary btn-neon-lg animasi-zoom">BELI SEKARANG</a>
+        </div>
+    </section>
+
+
+    <!-- Info Akun -->
+    <section class="section" id="akun">
+        <div class="container">
+            <h2 class="section-title">Informasi Akun</h2>
+            <div class="grid-3">
+                <div class="glass-card info-card">
+                    <div class="info-icon"><i class="fas fa-user"></i></div>
+                    <div>
+                        <h4>Username</h4>
+                        <p id="infoUsername">XionUser</p>
+                    </div>
+                </div>
+                <div class="glass-card info-card">
+                    <div class="info-icon"><i class="fas fa-check-circle"></i></div>
+                 <div>
+                        <h4>Status</h4>
+                        <p class="status-aktif">Aktif</p>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Layanan -->
+    <section class="section" id="layanan">
+        <div class="container">
+            <h2 class="section-title">Layanan Kami</h2>
+            <div class="grid-2">
+                <div class="glass-card service-card">
+                    <i class="fas fa-envelope service-icon"></i>
+                    <h3>Buy Gmail Fresh</h3>
+                    <p>Akun google yang baru bikin & Fresh.</p>
+                </div>
+                <div class="glass-card service-card">
+                    <i class="fas fa-mobile-alt service-icon"></i>
+                    <h3>Buy Nokos</h3>
+                    <p>Nomor virtual verifikasi OTP semua layanan global.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Produk -->
+    <section class="section" id="produk">
+        <div class="container">
+            <h2 class="section-title">Daftar Produk</h2>
+            <div class="grid-4">
+                <div class="glass-card product-card">
+                    <div class="product-icon"><i class="fab fa-google"></i></div>
+                    <h3>Gmail Fresh </h3>
+                    <p>Akun google fresh & Passwort : aass1122</p>
+                    <div class="price">Rp 4.500</div>
+                    <button class="btn-buy neon-border">BELI SEKARANG</button>
+                </div>
+                <div class="glass-card product-card">
+                    <div class="product-icon"><i class="fab fa-google"></i></div>
+                    <h3>Gmail Global</h3>
+                    <p>Akun google fresh & negara luar Passwort : aass1122</p>
+                    <div class="price">Rp 7.000</div>
+                    <button class="btn-buy neon-border">BELI SEKARANG</button>
+                </div>
+                <div class="glass-card product-card">
+                    <div class="product-icon"><i class="fas fa-phone"></i></div>
+                    <h3>Nokos Indonesia</h3>
+                    <p>Readyy nokos tinggal siap pakai</p>
+                    <div class="price">Rp 4.000</div>
+                    <button class="btn-buy neon-border">BELI SEKARANG</button>
+                </div>
+                <div class="glass-card product-card">
+                    <div class="product-icon"><i class="fas fa-globe-asia"></i></div>
+                    <h3>Nokos Global</h3>
+                    <p>USA, UK, RU, dll.</p>
+                    <div class="price">Rp 20.000</div>
+                    <button class="btn-buy neon-border">BELI SEKARANG</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>© 2026 XIONBLU Store</p>
+        </div>
+    </footer>
+
+    <!-- Popup Pembayaran -->
+    <div class="popup-overlay" id="popupBayar">
+        <div class="popup-content glass-card">
+            <span class="popup-close" id="tutupPopup"><i class="fas fa-times"></i></span>
+            <h2 class="popup-title neon-text-glow">Metode Pembayaran</h2>
+            
+            <div class="payment-wrapper">
+                <div class="qris-box">
+                    <h3>Scan QRIS</h3>
+                    <img src="assets/qris.jpg" alt="QRIS Pembayaran" class="qris-img">
+                    <p>Semua E-Wallet & Bank</p>
+                </div>
+
+                <div class="metode-list">
+                    <div class="metode-item glass-card">
+                        <i class="fas fa-money-bill-wave"></i>
+                        <div>
+                            <h4>DANA</h4>
+                            <p>088242668174</p>
+                        </div>
+                    </div>
+                    <div class="metode-item glass-card">
+                        <i class="fab fa-bitcoin"></i>
+                        <div>
+                            <h4>USDT (BEP20)</h4>
+                            <p>0x775E87717E538f58C083E0eF79B1a5345D09f226</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>
